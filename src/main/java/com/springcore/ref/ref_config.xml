@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+    <bean name="engine" class="com.springcore.ref.Engine"  p:type="V8"/>
+    
+    <!-- using p schema -->
+    <bean name = "car"  class=" com.springcore.ref.Car"  p:brand="Audi" p:model="A5" p:engine-ref="engine"/>
+    
+    <!-- using ref attribute in p tag -->
+    <bean name = "car2" class=" com.springcore.ref.Car" >
+         <property name="brand"  value="bmw"/>
+         <property name="model" value="s5"/>
+         <property name="engine" ref="engine"/>
+    </bean>
+
+</beans>

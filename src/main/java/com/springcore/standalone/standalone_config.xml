@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:util="http://www.springframework.org/schema/util"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util.xsd
+">
+   
+   <util:list list-class="java.util.LinkedList" id="list-data">
+            <value>Java</value>
+            <value>JavaScript</value>
+            <value>Python</value>
+            <value>TypeScript</value>
+   </util:list>
+   
+   <util:set set-class="java.util.LinkedHashSet" id="set-data">
+            <value>Angular</value>
+            <value>React</value>
+            <value>Next</value>
+            <value>Express</value>
+   </util:set>
+   
+   <util:map map-class="java.util.HashMap" id="map-data">
+           <entry key="round1" value="clear"/>
+           <entry key="round2" value="clear"/>
+           <entry key="round3" value="clear"/>
+           <entry key="round4" value="clear"/>
+   </util:map>
+   
+   <bean name="test" class="com.springcore.standalone.TestClass">
+          <property name="listData" ref="list-data"/>
+          <property name="setData" ref="set-data"/>
+          <property name="mapData" ref="map-data"/>
+   </bean>
+      
+      
+
+</beans>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<bean name="employee" class="com.springcore.collections.Employee">
+
+		<property name="eid" value="115489" />
+		<property name="name" value="John Doe" />
+
+		<property name="phones">
+			<list>
+				<value>8876541</value>
+				<value>8871211</value>
+				<value>7871881</value>
+			</list>
+		</property>
+
+		<property name="address">
+			<set>
+				<value>Delhi</value>
+				<value>Hyderabad</value>
+				<value>Pune</value>
+			</set>
+		</property>
+
+		<property name="languageProfes">
+			<map>
+				<entry key="Java" value="Master" />
+				<entry key="C" value="Profecient" />
+				<entry key="Python" value="Intemediate" />
+			</map>
+		</property>
+
+	</bean>
+
+</beans>
